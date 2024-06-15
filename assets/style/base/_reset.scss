@@ -1,0 +1,40 @@
+@use '../abstracts' as a;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	// outline: auto;
+}
+
+::selection {
+	background-color: a.color(white);
+	color: a.color(black);
+}
+
+:root {
+	transition: all 0.5s;
+	font-size: 14px;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Cygnito Mono', sans-serif;
+	color: a.color(white);
+	// background-color: a.color(background);
+	// overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	opacity: 1;
+	transition: .3s;
+
+	&:hover {
+		opacity: .75;
+	}
+}
