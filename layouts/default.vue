@@ -9,6 +9,8 @@ div
 			Icon(name="material-symbols:wb-sunny-outline-rounded" size="1.2em" color="black")
 		div(v-else-if="$colorMode.value === 'dark'" @click="$colorMode.preference = 'light'")
 			Icon(name="material-symbols:dark-mode-outline" size="1.2em")
+		div(v-else @click="$colorMode.preference = 'dark'")
+			Icon(name="material-symbols:wb-sunny-outline-rounded" size="1.2em" color="black")
 	main
 		slot
 </template>
