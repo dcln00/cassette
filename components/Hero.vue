@@ -1,6 +1,11 @@
 <template lang="pug">
 section#hero.w-full
 	.nested.flex.items-center.justify-center.flex-col
+		.socials.flex
+			NuxtLink(to="https://x.com/cassetteGH")
+				Icon(name="fa6-brands:x-twitter" size="1.2em")
+			NuxtLink(to="https://instagram.com/Cassette_Gh")
+				Icon(name="fa6-brands:instagram" size="1.2em")
 		.filler(class="pt-[4rem] pb-[4rem]")
 		.logo.grow.flex.items-center
 				SvgoLogoLight(v-if="$colorMode.value === 'dark'" class="w-full h-auto" :fontControlled="false")
@@ -19,6 +24,14 @@ section#hero.w-full
 	.nested {
 		height: 100dvh;
 		overflow: hidden;
+		// position: relative;
+
+		.socials {
+			position: absolute;
+			top: 1rem;
+			left: 1rem;
+			column-gap: 15px;
+		}
 
 		.logo {
 			width: 200px;
