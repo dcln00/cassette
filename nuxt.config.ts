@@ -31,9 +31,6 @@ export default defineNuxtConfig({
 		fallback: 'dark',
 		storageKey: 'color-mode'
 	},
-	svgo: {
-		autoImportPath: './public',
-	  },
 	site: {
 		url: 'https://cassette.productions',
 	},
