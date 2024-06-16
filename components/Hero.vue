@@ -2,8 +2,9 @@
 section#hero.w-full
 	.nested.flex.items-center.justify-center.flex-col
 		.filler(class="pt-[4rem] pb-[4rem]")
-		.logo.grow
-			NuxtImg(src='/logo-light.svg')
+		.logo.grow.flex.items-center
+				SvgoLogoLight(v-if="$colorMode.value === 'dark'" class="w-full h-auto" :fontControlled="false")
+				SvgoLogoDark(v-else-if="$colorMode.value === 'light'" class="w-full h-auto" :fontControlled="false")
 		.details.flex(:class="$device.isDesktop ? 'pt-[5rem] pb-[5rem]' : 'flex-col pt-[5rem] pb-[5rem] text-center'")
 			.tel 
 				NuxtLink(to="tel:+2330209679993") +233.(0).20.967.9993
@@ -11,10 +12,10 @@ section#hero.w-full
 				NuxtLink(to="mailto:info@cassette.productions") info@cassette.productions
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #hero {
 	background-color: #121212;
-	
+
 	.nested {
 		height: 100dvh;
 		overflow: hidden;

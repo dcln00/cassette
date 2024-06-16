@@ -17,13 +17,23 @@ export default defineNuxtConfig({
 	},
 	css: ['~/assets/style/app.scss'],
 	modules: [
-		'@nuxtjs/tailwindcss',
-		'@nuxt/image',
-		'nuxt-icon',
-		'@nuxtjs/device',
-		'@nuxt/fonts',
-		'nuxt-og-image',
-	],
+        '@nuxt/image',
+        'nuxt-icon',
+        '@nuxtjs/device',
+        '@nuxt/fonts',
+        'nuxt-og-image',
+        '@nuxtjs/color-mode',
+        '@nuxtjs/tailwindcss',
+        "nuxt-svgo"
+    ],
+	colorMode: {
+		preference: 'dark',
+		fallback: 'dark',
+		storageKey: 'color-mode'
+	},
+	svgo: {
+		autoImportPath: './public',
+	  },
 	site: {
 		url: 'https://cassette.productions',
 	},
