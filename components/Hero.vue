@@ -43,7 +43,7 @@ section#hero.w-full
 	#hero {
 		.nested {
 			.logo {
-				width: 110px;
+				width: 150px;
 			}
 		}
 		.details {
